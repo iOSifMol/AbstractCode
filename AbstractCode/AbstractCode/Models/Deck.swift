@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Api
+import Models
 
 struct Deck: Deckable {
   var deckId: String

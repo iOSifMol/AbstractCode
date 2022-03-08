@@ -7,103 +7,145 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		50EE703827CE9D250049C8F0 /* Api.h in Headers */ = {isa = PBXBuildFile; fileRef = 50EE703727CE9D250049C8F0 /* Api.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		50EE703F27CE9D970049C8F0 /* DeckApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE703E27CE9D970049C8F0 /* DeckApi.swift */; };
-		50EE704127CE9EC90049C8F0 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EE704027CE9EC90049C8F0 /* Route.swift */; };
+		50692A6527D7D99D00F2CF55 /* Models.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50692A6427D7D99D00F2CF55 /* Models.framework */; };
+		50692A6627D7D99D00F2CF55 /* Models.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 50692A6427D7D99D00F2CF55 /* Models.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		50B6944627D67B5900705895 /* DB.h in Headers */ = {isa = PBXBuildFile; fileRef = 50B6944527D67B5900705895 /* DB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50B6944D27D67B9A00705895 /* DeckDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B6944C27D67B9A00705895 /* DeckDB.swift */; };
+		50B6945F27D6822100705895 /* DBHand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B6945E27D6822100705895 /* DBHand.swift */; };
+		50B6946127D6823200705895 /* DBCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B6946027D6823200705895 /* DBCard.swift */; };
+		50B6946527D699C700705895 /* Deck.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 50B6945127D67C3100705895 /* Deck.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		50692A6727D7D99D00F2CF55 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				50692A6627D7D99D00F2CF55 /* Models.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		50EE703427CE9D250049C8F0 /* Api.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Api.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		50EE703727CE9D250049C8F0 /* Api.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Api.h; sourceTree = "<group>"; };
-		50EE703E27CE9D970049C8F0 /* DeckApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckApi.swift; sourceTree = "<group>"; };
-		50EE704027CE9EC90049C8F0 /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		50692A6427D7D99D00F2CF55 /* Models.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Models.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B6944227D67B5900705895 /* DB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		50B6944527D67B5900705895 /* DB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DB.h; sourceTree = "<group>"; };
+		50B6944C27D67B9A00705895 /* DeckDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeckDB.swift; sourceTree = "<group>"; };
+		50B6945227D67C3100705895 /* Deck.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Deck.xcdatamodel; sourceTree = "<group>"; };
+		50B6945E27D6822100705895 /* DBHand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHand.swift; sourceTree = "<group>"; };
+		50B6946027D6823200705895 /* DBCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		50EE703127CE9D250049C8F0 /* Frameworks */ = {
+		50B6943F27D67B5900705895 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50692A6527D7D99D00F2CF55 /* Models.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50EE702A27CE9D250049C8F0 = {
+		50692A6327D7D99D00F2CF55 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				50EE703627CE9D250049C8F0 /* Api */,
-				50EE703527CE9D250049C8F0 /* Products */,
+				50692A6427D7D99D00F2CF55 /* Models.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		50B6943827D67B5800705895 = {
+			isa = PBXGroup;
+			children = (
+				50B6944427D67B5900705895 /* DB */,
+				50B6944327D67B5900705895 /* Products */,
+				50692A6327D7D99D00F2CF55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		50EE703527CE9D250049C8F0 /* Products */ = {
+		50B6944327D67B5900705895 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				50EE703427CE9D250049C8F0 /* Api.framework */,
+				50B6944227D67B5900705895 /* DB.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		50EE703627CE9D250049C8F0 /* Api */ = {
+		50B6944427D67B5900705895 /* DB */ = {
 			isa = PBXGroup;
 			children = (
-				50EE703727CE9D250049C8F0 /* Api.h */,
-				50EE704027CE9EC90049C8F0 /* Route.swift */,
-				50EE703E27CE9D970049C8F0 /* DeckApi.swift */,
+				50B6944527D67B5900705895 /* DB.h */,
+				50B6945B27D681A700705895 /* CoreData */,
+				50B6944C27D67B9A00705895 /* DeckDB.swift */,
 			);
-			path = Api;
+			path = DB;
+			sourceTree = "<group>";
+		};
+		50B6945B27D681A700705895 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				50B6945127D67C3100705895 /* Deck.xcdatamodeld */,
+				50B6945E27D6822100705895 /* DBHand.swift */,
+				50B6946027D6823200705895 /* DBCard.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		50EE702F27CE9D250049C8F0 /* Headers */ = {
+		50B6943D27D67B5900705895 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50EE703827CE9D250049C8F0 /* Api.h in Headers */,
+				50B6944627D67B5900705895 /* DB.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		50EE703327CE9D250049C8F0 /* Api */ = {
+		50B6944127D67B5900705895 /* DB */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 50EE703B27CE9D250049C8F0 /* Build configuration list for PBXNativeTarget "Api" */;
+			buildConfigurationList = 50B6944927D67B5900705895 /* Build configuration list for PBXNativeTarget "DB" */;
 			buildPhases = (
-				50EE702F27CE9D250049C8F0 /* Headers */,
-				50EE703027CE9D250049C8F0 /* Sources */,
-				50EE703127CE9D250049C8F0 /* Frameworks */,
-				50EE703227CE9D250049C8F0 /* Resources */,
+				50B6943D27D67B5900705895 /* Headers */,
+				50B6943E27D67B5900705895 /* Sources */,
+				50B6943F27D67B5900705895 /* Frameworks */,
+				50B6944027D67B5900705895 /* Resources */,
+				50692A6727D7D99D00F2CF55 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Api;
-			productName = Api;
-			productReference = 50EE703427CE9D250049C8F0 /* Api.framework */;
+			name = DB;
+			productName = DB;
+			productReference = 50B6944227D67B5900705895 /* DB.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		50EE702B27CE9D250049C8F0 /* Project object */ = {
+		50B6943927D67B5800705895 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					50EE703327CE9D250049C8F0 = {
+					50B6944127D67B5900705895 = {
 						CreatedOnToolsVersion = 13.2.1;
 						LastSwiftMigration = 1320;
 					};
 				};
 			};
-			buildConfigurationList = 50EE702E27CE9D250049C8F0 /* Build configuration list for PBXProject "Api" */;
+			buildConfigurationList = 50B6943C27D67B5800705895 /* Build configuration list for PBXProject "DB" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,18 +153,18 @@
 				en,
 				Base,
 			);
-			mainGroup = 50EE702A27CE9D250049C8F0;
-			productRefGroup = 50EE703527CE9D250049C8F0 /* Products */;
+			mainGroup = 50B6943827D67B5800705895;
+			productRefGroup = 50B6944327D67B5900705895 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				50EE703327CE9D250049C8F0 /* Api */,
+				50B6944127D67B5900705895 /* DB */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		50EE703227CE9D250049C8F0 /* Resources */ = {
+		50B6944027D67B5900705895 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,19 +174,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		50EE703027CE9D250049C8F0 /* Sources */ = {
+		50B6943E27D67B5900705895 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50EE703F27CE9D970049C8F0 /* DeckApi.swift in Sources */,
-				50EE704127CE9EC90049C8F0 /* Route.swift in Sources */,
+				50B6946127D6823200705895 /* DBCard.swift in Sources */,
+				50B6945F27D6822100705895 /* DBHand.swift in Sources */,
+				50B6944D27D67B9A00705895 /* DeckDB.swift in Sources */,
+				50B6946527D699C700705895 /* Deck.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		50EE703927CE9D250049C8F0 /* Debug */ = {
+		50B6944727D67B5900705895 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +252,7 @@
 			};
 			name = Debug;
 		};
-		50EE703A27CE9D250049C8F0 /* Release */ = {
+		50B6944827D67B5900705895 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +310,7 @@
 			};
 			name = Release;
 		};
-		50EE703C27CE9D250049C8F0 /* Debug */ = {
+		50B6944A27D67B5900705895 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -285,7 +329,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Medium.Api;
+				PRODUCT_BUNDLE_IDENTIFIER = Medium.DB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -295,7 +339,7 @@
 			};
 			name = Debug;
 		};
-		50EE703D27CE9D250049C8F0 /* Release */ = {
+		50B6944B27D67B5900705895 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
@@ -314,7 +358,7 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = Medium.Api;
+				PRODUCT_BUNDLE_IDENTIFIER = Medium.DB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -326,25 +370,38 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		50EE702E27CE9D250049C8F0 /* Build configuration list for PBXProject "Api" */ = {
+		50B6943C27D67B5800705895 /* Build configuration list for PBXProject "DB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50EE703927CE9D250049C8F0 /* Debug */,
-				50EE703A27CE9D250049C8F0 /* Release */,
+				50B6944727D67B5900705895 /* Debug */,
+				50B6944827D67B5900705895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		50EE703B27CE9D250049C8F0 /* Build configuration list for PBXNativeTarget "Api" */ = {
+		50B6944927D67B5900705895 /* Build configuration list for PBXNativeTarget "DB" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				50EE703C27CE9D250049C8F0 /* Debug */,
-				50EE703D27CE9D250049C8F0 /* Release */,
+				50B6944A27D67B5900705895 /* Debug */,
+				50B6944B27D67B5900705895 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		50B6945127D67C3100705895 /* Deck.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				50B6945227D67C3100705895 /* Deck.xcdatamodel */,
+			);
+			currentVersion = 50B6945227D67C3100705895 /* Deck.xcdatamodel */;
+			path = Deck.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 50EE702B27CE9D250049C8F0 /* Project object */;
+	rootObject = 50B6943927D67B5800705895 /* Project object */;
 }

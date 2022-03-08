@@ -11,4 +11,5 @@ public protocol Deckable: Codable {
   var deckId: String { get set }
   var remaining: Int { get set }
   var shuffled: Bool { get set }
+  init(deckId: String, remaining: Int, shuffled: Bool)
 }

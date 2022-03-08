@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Api
+import Models
 
 struct Hand: Handable {
   var deckId: String

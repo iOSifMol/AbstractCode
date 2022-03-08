@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19574" systemVersion="21D62" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DBCard" representedClassName=".DBCard" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="suit" optional="YES" attributeType="String"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <relationship name="hand" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DBHand" inverseName="dbCards" inverseEntity="DBHand"/>
+    </entity>
+    <entity name="DBHand" representedClassName=".DBHand" syncable="YES">
+        <attribute name="deckId" optional="YES" attributeType="String"/>
+        <attribute name="remaining" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="dbCards" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DBCard" inverseName="hand" inverseEntity="DBCard"/>
+    </entity>
+    <elements>
+        <element name="DBHand" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="DBCard" positionX="-36" positionY="9" width="128" height="104"/>
+    </elements>
+</model>

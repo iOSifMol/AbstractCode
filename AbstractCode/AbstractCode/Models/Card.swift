@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import Api
+import Models
 
-struct Card: Cardable {
+struct Card: Cardable{
   var code: String
   var value: String
   var suit: String

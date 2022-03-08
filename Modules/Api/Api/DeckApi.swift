@@ -32,7 +32,6 @@ public struct DeckApi {
   private func parseResponse<Model: Codable>(data: Data,
                                              completion: @escaping (_ result: Result<Model, Error>) -> Void) {
     do {
-      print("Data: \(String(data: data, encoding: .utf8)!)")
       let decoder = JSONDecoder()
       decoder.keyDecodingStrategy = .convertFromSnakeCase
       let model = try decoder.decode(Model.self, from: data)
