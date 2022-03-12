@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 public struct DeckApi {
   public init() {}
@@ -29,6 +30,20 @@ public struct DeckApi {
     }.resume()
   }
   
+  public func getImage(from url: URL, completion: @escaping (_ image: UIImage?) -> Void) {
+    URLSession.shared.dataTask(with: url) { data, response, error in
+      DispatchQueue.main.async {
+        let httpResponse = response as? HTTPURLResponse
+        guard httpResponse?.statusCode == 200, error == nil, let imageData = data else {
+          completion(nil)
+          return
+        }
+        completion(UIImage(data: imageData))
+      }
+    }.resume()
+  }
+  
+  // MARK: - Helpers Methods
   private func parseResponse<Model: Codable>(data: Data,
                                              completion: @escaping (_ result: Result<Model, Error>) -> Void) {
     do {

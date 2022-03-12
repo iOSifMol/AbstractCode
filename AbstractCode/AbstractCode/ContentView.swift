@@ -8,11 +8,38 @@
 import SwiftUI
 
 struct ContentView: View {
-  let viewModel = ViewModel()
+  @ObservedObject var viewModel = ViewModel()
   
   var body: some View {
-    Text("Hello, world!")
-      .padding()
+    VStack {
+      Image(uiImage: viewModel.cardImage)
+        .resizable()
+        .frame(width: 230, height: 300)
+      stateText
+        .padding(20)
+      HStack {
+        Button("Draw new card") {
+          viewModel.getNewHand()
+        }
+        Spacer()
+        Button("Reshuffle") {
+          viewModel.reshuffleDeck()
+        }
+      }
+      .padding(20)
+    }
+  }
+  
+  // MARK: Setup View
+  private var stateText: Text {
+    switch viewModel.state {
+    case .fetching:
+      return Text("Loading hand...")
+    case .playing(let hand):
+      return Text("Available cards in deck: \(hand.remaining)")
+    case .error(let message):
+      return Text(message)
+    }
   }
 }
 
